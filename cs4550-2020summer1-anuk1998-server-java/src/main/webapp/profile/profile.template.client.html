@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+
+  <!--document order: last one wins and takes precendent (loaded afterwards = overrides previous)-->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        rel="stylesheet"/>
+
+
+  <link href="../styles.css" rel="stylesheet"/>
+
+  <link href="profile.style.client.css"
+        rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+  <h1>Profile</h1>
+
+<div>
+
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label"
+      for="username">Username</label>
+
+  <div class="col-sm-10">
+  <input
+      id="username"
+      class="form-control wbdv-field wbdv-username"
+      type="text"
+      placeholder="Anu1898"
+  />
+  </div>
+
+</div>
+
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"
+           for="phone">Phone</label>
+
+    <div class="col-sm-10">
+      <input
+          id="phone"
+          class="form-control"
+          type="text"
+          placeholder="609-721-3139"
+      />
+    </div>
+
+  </div>
+
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"
+           for="email">Email</label>
+
+    <div class="col-sm-10">
+      <input
+          id="email"
+          class="form-control"
+          type="text"
+          placeholder="kandasamy.a@husky.neu.edu"
+      />
+    </div>
+
+  </div>
+
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"
+           for="phone">Role</label>
+
+    <div class="col-sm-10">
+      <select value="Role">
+        <option value="Faculty">Faculty</option>
+        <option selected value="Student">Student</option>
+        <option value="Parent">Parent</option>
+
+      </select>
+    </div>
+
+  </div>
+
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"
+           for="email">Date of Birth</label>
+
+    <div class="col-sm-10">
+      <input
+          type="date" value="2020-05-04"
+      />
+    </div>
+
+  </div>
+
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"></label>
+
+    <div class="col-sm-10">
+      <a href="../profile/profile.template.client.html"
+         class="btn btn-success btn-block">
+        Update
+      </a>
+    </div>
+
+  </div>
+
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"></label>
+
+    <div class="col-sm-10">
+      <a href="../index.html"
+         class="btn btn-danger btn-block">
+        Logout
+      </a>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <br/>
+
+
+  <!--Marital Status
+  <label>
+  <input type="radio" name="Mstatus"/>Married</label>
+  <label>
+  <input type="radio" name="Mstatus"/>Single</label>
+  <label>
+  <input type="radio" name="Mstatus"/>Divorced
+    </label>
+
+  <br/>
+
+  Favorite Color
+  <label>
+    <input type="radio" name="FCOLOR"/>Red</label>
+  <label>
+    <input type="radio" name="FCOLOR"/>Pink</label>
+  <label>
+    <input type="radio" name="FCOLOR"/>Purple
+  </label>
+
+  <br/>
+
+  Favorite Movie Genres
+  <label>
+    <input type="checkbox" name="MGENRE"/>Horror</label>
+  <label>
+    <input type="checkbox" name="MGENRE"/>Comedy</label>
+  <label>
+    <input type="checkbox" name="MGENRE"/>Romance
+  </label>
+
+-->
+
+
+  </div>
+
+
+</div>
+</body>
+</html>

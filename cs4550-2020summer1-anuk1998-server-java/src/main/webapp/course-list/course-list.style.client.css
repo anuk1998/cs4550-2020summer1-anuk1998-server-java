@@ -1,0 +1,16 @@
+body{
+padding-top: 65px;
+background-color: gainsboro
+}
+
+td {
+background-color: white
+
+}
+
+.table-light {
+background-color:gainsboro
+}
+
+.btn-danger {
+padding: 1px 5px}

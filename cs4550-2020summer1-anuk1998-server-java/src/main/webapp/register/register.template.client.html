@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+
+  <!--document order: last one wins and takes precendent (loaded afterwards = overrides previous)-->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        rel="stylesheet"/>
+
+
+  <link href="../styles.css" rel="stylesheet"/>
+
+  <link href="register.style.client.css"
+        rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+  <h1>Register</h1>
+  <label for="username">Username</label>
+  <input
+      id="username"
+      class="form-control"
+      type="text"
+      placeholder="joe123"
+      title="Use this username to login"/>
+
+
+  <label for="password">Password</label>
+  <input
+      class="form-control"
+      id="password"
+      type="password"/>
+
+  <label for="verify password">Verify Password</label>
+  <input
+      class="form-control"
+      id="verify password"
+      type="password"/>
+
+<a href="../profile/profile.template.client.html"
+   class="btn btn-primary">
+    Register
+</a>
+
+  <a class ="float-right btn btn-primary" href="../login/login.template.client.html">
+    Login
+  </a>
+
+
+
+</div>
+</body>
+</html>
