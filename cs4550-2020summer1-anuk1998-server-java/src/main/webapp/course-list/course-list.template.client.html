@@ -7,49 +7,60 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         rel="stylesheet"/>
 
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+
+
+  <link  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+         rel="stylesheet">
+
 
   <link href="../styles.css" rel="stylesheet"/>
 
   <link href="course-list.style.client.css"
         rel="stylesheet"/>
 
+
+
 </head>
-<body style="padding-top: 65px;">
+<body style="padding-top: 70px;">
 
 
-<div class="container">
-  <nav class="navbar navbar-dark bg-primary fixed-top justify-content-between ">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar navbar-dark bg-dark fixed-top justify-content-between">
 
-    <a class="navbar-brand" href="#">Course Manager</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
 
-    <form class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="New Course Title" aria-label="Search">
-      <button
-          class="btn btn-danger my-2 my-sm-0"
-          type="submit">
-        +</button>
+  </div>
 
-    </form>
--
-  </nav>
-
-
-
-
-
+  <a class="navbar-brand" href="#"> Course Manager
+  </a>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="New Course Title" aria-label="Search">
+    <button class="btn btn-danger" type="submit">+</button>
+  </form>
+</nav>
 
 
- <table class="table table-striped">
+  <div class="container-fluid">
+
+ <table class="table table-striped ">
+
    <thead>
-<tr class="table-light">
-  <th>Title</th>
-  <th>Owned</th>
-  <th>Modified</th>
-  <th></th>
+
+  <tr class="table-light ">
+  <th class="wbdv-header wbdv-title">Title</th>
+  <th class="wbdv-header wbdv-owne">Owned by</th>
+  <th class="wbdv-header wbdv-last-modified">Last Modified</th>
+  <th><i class="fa fa-th" aria-hidden="true wbdv-button wbdv-grid-layout"></i>
+          <i class="fa fa-sort-alpha-asc wbdv-header wbdv-sort" aria-hidden="true"></i></th>
 </tr>
 
    </thead>
@@ -57,106 +68,124 @@
 
    <tbody>
 
-   <tr <!--class="table-success"-->
-     <td>CS4550</td>
-     <td>Me</td>
-     <td>Today</td>
-     <td><button class= "float-right btn btn-danger">X</button></td>
+   <tr>
+     <td class="wbdv-row wbdv-course wbdv-row wbdv-title" style="color: black"><i class="fa fa-file-text wbdv-row wbdv-icon" aria-hidden="true"></i>
+       CS4550</td>
+     <td class="wbdv-row wbdv-owner">me</td>
+     <td class="wbdv-row wbdv-modified-date">Today</td>
+     <td><button class= "float-right btn btn-danger wbdv-row wbdv-button wbdv-delete"
+     ><i class="fa fa-trash "></i></button></td>
    </tr>
 
    <tr>
-     <td>CS4100</td>
-     <td>Me</td>
+     <td style="color: black"><i class="fa fa-file-text" aria-hidden="true"></i> CS4100</td>
+     <td>me</td>
      <td>Today</td>
-     <td><button class= "float-right btn btn-danger">X</button></td>
+     <td><button class= "float-right btn btn-danger">
+       <i class="fa fa-trash"></i>
+     </button></td>
+   </tr>
+
+   <tr class="table-success">
+     <td style="color: black"><i class="fa fa-file-text" aria-hidden="true"></i> DS2000</td>
+     <td>me</td>
+     <td>Today</td>
+     <td><button class= "float-right btn btn-danger"><i class="fa fa-trash"></i></button></td>
    </tr>
 
    <tr>
-     <td>DS2000</td>
-     <td>Me</td>
+     <td style="color: black"><i class="fa fa-file-text" aria-hidden="true"></i> CS3500</td>
+     <td>me</td>
      <td>Today</td>
-     <td><button class= "float-right btn btn-danger">X</button></td>
+     <td><button class= "float-right btn btn-danger"><i class="fa fa-trash"></i></button></td>
    </tr>
 
    <tr>
-     <td>CS3500</td>
-     <td>Me</td>
+     <td style="color: black"><i class="fa fa-file-text" aria-hidden="true"></i> ENG1101</td>
+     <td>me</td>
      <td>Today</td>
-     <td><button class= "float-right btn btn-danger">X</button></td>
+     <td><button class= "float-right btn btn-danger"><i class="fa fa-trash"></i></button></td>
    </tr>
 
    <tr>
-     <td>ENG1101</td>
-     <td>Me</td>
+     <td style="color: black"><i class="fa fa-file-text" aria-hidden="true"></i> PSYC1101</td>
+     <td>me</td>
      <td>Today</td>
-     <td><button class= "float-right btn btn-danger">X</button></td>
-   </tr>
-
-   <tr>
-     <td>PSYC1101</td>
-     <td>Me</td>
-     <td>Today</td>
-     <td><button class= "float-right btn btn-danger">X</button></td>
-   </tr>
-
-
-   <tr>
-     <td>FIN2209</td>
-     <td>Me</td>
-     <td>Today</td>
-     <td><button class= "float-right btn btn-danger">X</button></td>
+     <td><button class= "float-right btn btn-danger"><i class="fa fa-trash"></i></button></td>
    </tr>
 
 
    <tr>
-     <td>CS3500</td>
-     <td>Me</td>
+     <td style="color: black"><i class="fa fa-file-text" aria-hidden="true"></i> FIN2209</td>
+     <td>me</td>
      <td>Today</td>
-     <td><button class= "float-right btn btn-danger">X</button></td>
-   </tr>
-
-   <tr>
-     <td>CS3500</td>
-     <td>Me</td>
-     <td>Today</td>
-     <td><button class= "float-right btn btn-danger">X</button></td>
-   </tr>
-
-   <tr>
-     <td>CS3500</td>
-     <td>Me</td>
-     <td>Today</td>
-     <td><button class= "float-right btn btn-danger">X</button></td>
-   </tr>
-
-   <tr>
-     <td>CS3500</td>
-     <td>Me</td>
-     <td>Today</td>
-     <td><button class= "float-right btn btn-danger">X</button></td>
-   </tr>
-
-   <tr>
-     <td>CS3500</td>
-     <td>Me</td>
-     <td>Today</td>
-     <td><button class= "float-right btn btn-danger">X</button></td>
-   </tr>
-
-   <tr>
-     <td>CS3500</td>
-     <td>Me</td>
-     <td>Today</td>
-     <td><button class= "float-right btn btn-danger">X</button></td>
+     <td><button class= "float-right btn btn-danger"><i class="fa fa-trash"></i></button></td>
    </tr>
 
 
+   <tr>
+     <td style="color: black"><i class="fa fa-file-text" aria-hidden="true"></i> CS3500</td>
+     <td>me</td>
+     <td>Today</td>
+     <td><button class= "float-right btn btn-danger"><i class="fa fa-trash"></i></button></td>
+   </tr>
 
    <tr>
-     <td>CS3500</td>
-     <td>Me</td>
+     <td style="color: black"><i class="fa fa-file-text" aria-hidden="true"></i> CS3500</td>
+     <td>me</td>
      <td>Today</td>
-     <td><button class= "float-right btn btn-danger">X</button></td>
+     <td><button class= "float-right btn btn-danger"><i class="fa fa-trash"></i></button></td>
+   </tr>
+
+   <tr>
+     <td style="color: black"><i class="fa fa-file-text" aria-hidden="true"></i> CS3500</td>
+     <td>me</td>
+     <td>Today</td>
+     <td><button class= "float-right btn btn-danger"><i class="fa fa-trash"></i></button></td>
+   </tr>
+
+   <tr>
+     <td style="color: black"><i class="fa fa-file-text" aria-hidden="true"></i> CS3500</td>
+     <td>me</td>
+     <td>Today</td>
+     <td><button class= "float-right btn btn-danger"><i class="fa fa-trash"></i></button></td>
+   </tr>
+
+   <tr>
+     <td style="color: black"><i class="fa fa-file-text" aria-hidden="true"></i> CS3500</td>
+     <td>me</td>
+     <td>Today</td>
+     <td><button class= "float-right btn btn-danger"><i class="fa fa-trash"></i></button></td>
+   </tr>
+   <tr>
+     <td style="color: black"><i class="fa fa-file-text" aria-hidden="true"></i> CS3500</td>
+     <td>me</td>
+     <td>Today</td>
+     <td><button class= "float-right btn btn-danger"><i class="fa fa-trash"></i></button></td>
+   </tr>
+   <tr>
+     <td style="color: black"><i class="fa fa-file-text" aria-hidden="true"></i> CS3500</td>
+     <td>me</td>
+     <td>Today</td>
+     <td><button class= "float-right btn btn-danger"><i class="fa fa-trash"></i></button></td>
+   </tr>
+   <tr>
+     <td style="color: black"><i class="fa fa-file-text" aria-hidden="true"></i> CS3500</td>
+     <td>me</td>
+     <td>Today</td>
+     <td><button class= "float-right btn btn-danger"><i class="fa fa-trash"></i></button></td>
+   </tr>
+   <tr>
+     <td style="color: black"><i class="fa fa-file-text" aria-hidden="true"></i> CS3500</td>
+     <td>me</td>
+     <td>Today</td>
+     <td><button class= "float-right btn btn-danger"><i class="fa fa-trash"></i></button></td>
+   </tr>
+   <tr>
+     <td style="color: black"><i class="fa fa-file-text" aria-hidden="true"></i> CS3500</td>
+     <td>me</td>
+     <td>Today</td>
+     <td><button class= "float-right btn btn-danger"><i class="fa fa-trash"></i></button></td>
    </tr>
 
 
@@ -171,15 +200,8 @@
 
  </table>
 
-
+<button class="wbdv-bottom-right-10px btn btn-danger ">+</button>
 </div>
-
-
-
-
-
-
-
 
 
 </body>

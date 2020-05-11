@@ -17,33 +17,71 @@
 <body>
 <div class="container">
   <h1>Register</h1>
-  <label for="username">Username</label>
-  <input
-      id="username"
-      class="form-control"
-      type="text"
-      placeholder="joe123"
-      title="Use this username to login"/>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"
+           for="username">Username</label>
+
+    <div class="col-sm-10">
+      <input
+          id="username"
+          class="form-control wbdv-field wbdv-username"
+          type="text"
+          placeholder="joe123"
+          title="Use this username to login"/>
+    </div>
+
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"
+           for="password">Password</label>
+
+    <div class="col-sm-10">
+      <input
+          id="password"
+          class="form-control wbdv-field wbdv-password"
+          type="text"
+          placeholder="#abd%2@l"
+          title="Use this password to login"
+      />
+    </div>
+
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"
+           for="verify-password">Verify Password</label>
+
+    <div class="col-sm-10">
+      <input
+          id="verify-password"
+          class="form-control wbdv-field wbdv-password-verify"
+          type="text"
+          placeholder="#abd%2@l"
+          title="Verify Password"
+      />
+    </div>
+
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"></label>
+
+    <div class="col-sm-10">
+      <a href="../profile/profile.template.client.html"
+         class="btn btn-primary btn-block wbdv-button wbdv-register">
+        Register
+      </a>
+
+    </div>
+
+  </div>
 
 
-  <label for="password">Password</label>
-  <input
-      class="form-control"
-      id="password"
-      type="password"/>
 
-  <label for="verify password">Verify Password</label>
-  <input
-      class="form-control"
-      id="verify password"
-      type="password"/>
 
-<a href="../profile/profile.template.client.html"
-   class="btn btn-primary">
-    Register
-</a>
 
-  <a class ="float-right btn btn-primary" href="../login/login.template.client.html">
+  <a class="float-right wbdv-link wbdv-login" href="../login/login.template.client.html">
     Login
   </a>
 

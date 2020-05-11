@@ -8,6 +8,7 @@
         rel="stylesheet"/>
 
 
+
   <link href="../styles.css" rel="stylesheet"/>
 
   <link href="course-editor.style.client.css"
@@ -24,63 +25,120 @@
 </head>
 <body>
 
-<!--<div class ="container">-->6
+<!--<div class ="container">-->
 
-<h1>
-  Course Editor
-</h1>
+<div class="course-header wbdv-course-title" >
+<h2 style="color: white"  >
+  Course Editor: CS5610 - WebDev
 
-<div class="row">
-  <div class="col-4"><!--LEFT COLUMN-->
+  <a href="../course-list/course-list.template.client.html"
+     class="btn btn-white float-right wbdv-course-editor wbdv-close"
+     style= "color: white" >
+    Exit
+  </a>
+
+</h2>
+
+
+
+
+
+</div>
+
+<div class="row" >
+  <div class="col-4" style="background-color: rgb(80,80,80)"><!--LEFT COLUMN-->
     <div>
       <!--<h2 style="color: blue">-->
-      <h2>
+      <h3 style="color: white">
         Module List
-      </h2>
+      </h3>
 
-      <ul class="list-group">
-        <li class="list-group-item active">Module 1</li>
-        <li class="list-group-item">Module 2</li>
-        <li class="list-group-item">Module 3</li>
-        <li class="list-group-item">Module 4</li>
-        <li class="list-group-item">Module 5</li>
+
+     <ul class="list-group wbdv-module-list">
+        <li class="list-group-item active module-x wbdv-module-item">Module 1 -React>
+          <button
+              class="btn btn-white float-right"
+              type="submit"
+              style="color:white">
+            X </button></li>
+
+        <li class="list-group-item">Module 2 -JQuery
+          <button
+              class="btn btn-white float-right wbdv-module-item-delete-btn"
+              type="submit"
+              style="color:white">
+            X </button></li>
+        <li class="list-group-item">Module 3 -Redux
+          <button
+              class="btn btn-white float-right"
+              type="submit"
+              style="color:white">
+            X </button></li>
+        <li class="list-group-item">Module 4 -Angular
+          <button
+              class="btn btn-white float-right"
+              type="submit"
+              style="color:white">
+            X </button></li>
+        <li class="list-group-item">Module 5 -Node
+          <button
+              class="btn btn-white float-right"
+              type="submit"
+              style="color:white">
+            X </button></li>
+       <li class="list-group-item">Module 6 -Mongo
+         <button
+             class="btn btn-white float-right"
+             type="submit"
+             style="color:white">
+           X </button></li>
       </ul>
+
+
+      <button
+          class="btn btn-white float-right wbdv-module-item-add-btn"
+          type="submit"
+          style="color:white">
+        Add </button>
     </div>
   </div>
   <div class="col-8">
     <!--RIGHT COLUMN-->
     <!--<div style="color: blue">-->
     <div>
-      <h2 id="lessons">
-        Lessons
+      <h2 id="categories">
+
       </h2>
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Lesson 1</a>
+          <a class="nav-link" href="#">Build</a>
         </li>
+        <li class="nav-item wbdv-page-tab">
+          <a class="nav-link active" href="#">Pages</a></li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Lesson 2</a></li>
+          <a class="nav-link" href="#">Theme</a></li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Lesson 3</a></li>
+          <a class="nav-link" href="#">Store</a></li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Lesson 4</a></li>
+          <a class="nav-link" href="#">Apps</a></li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Lesson 5</a></li>
+          <a class="nav-link" href="#">Settings</a>
+        </li>
       </ul>
     </div>
 
     <!--<div style="background-color: yellow; color:red">-->
     <div>
-      <h2 id="topics">
+      <h3 id="topics">
         Topics
-      </h2>
+      </h3>
 
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">
+      <ul class="nav nav-pills wbdv-topic-pill-list">
+        <li class="nav-item wbdv-topic-pill">
+          <a class="nav-link " href="#">
           Topic 1</a></li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link active" href="#">
           Topic 2</a></li>
         <li class="nav-item">
           <a class="nav-link" href="#">
@@ -90,11 +148,17 @@
           Topic 4</a></li>
         <li class="nav-item">
           <a class="nav-link" href="#">
-          Topic 5</a></li>
+        Topic 5</a></li>
+        <li class="nav-item wbdv-topic-add-btn">
+          <a class="nav-link" href="#">
+            +</a></li></li>
 
       </ul>
 
+
     </div>
+
+
 
    <br/>
     <div>

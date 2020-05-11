@@ -1,16 +1,35 @@
 body{
 padding-top: 65px;
-background-color: gainsboro
 }
 
 td {
-background-color: white
-
+color: gray;
 }
 
+th {
+color: rgb(80,80,80);}
+
 .table-light {
-background-color:gainsboro
+background-color:white
 }
 
 .btn-danger {
-padding: 1px 5px}
+padding: 1px 7px;
+border-radius: 60px;
+}
+
+.wbdv-bottom-right-10px {
+position: fixed;
+bottom:10px;
+right: 10px;
+}
+
+.container {
+;}
+
+
+
+
+
+
+

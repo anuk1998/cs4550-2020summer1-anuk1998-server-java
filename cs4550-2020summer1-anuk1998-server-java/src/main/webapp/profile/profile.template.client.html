@@ -18,7 +18,11 @@
 <div class="container">
   <h1>Profile</h1>
 
-<div>
+
+
+<div class="alert alert-success wbdv-message" role="alert">
+  Profile Successfully Saved
+</div>
 
 <div class="form-group row">
   <label class="col-sm-2 col-form-label"
@@ -43,7 +47,7 @@
     <div class="col-sm-10">
       <input
           id="phone"
-          class="form-control"
+          class="form-control wbdv-field wbdv-phone"
           type="text"
           placeholder="609-721-3139"
       />
@@ -59,7 +63,7 @@
     <div class="col-sm-10">
       <input
           id="email"
-          class="form-control"
+          class="form-control wbdv-field wbdv-email"
           type="text"
           placeholder="kandasamy.a@husky.neu.edu"
       />
@@ -69,15 +73,13 @@
 
 
   <div class="form-group row">
-    <label class="col-sm-2 col-form-label"
-           for="phone">Role</label>
+    <label class="col-sm-2 col-form-label wbdv-field wbdv-role">Role</label>
 
     <div class="col-sm-10">
-      <select value="Role">
-        <option value="Faculty">Faculty</option>
-        <option selected value="Student">Student</option>
-        <option value="Parent">Parent</option>
-
+      <select class="custom-select">
+      <option value ="student" selected>Student</option>
+      <option value="faculty">Faculty</option>
+      <option value="parent">Parent</option>
       </select>
     </div>
 
@@ -86,15 +88,32 @@
 
   <div class="form-group row">
     <label class="col-sm-2 col-form-label"
-           for="email">Date of Birth</label>
+           for="date">Date of Birth</label>
 
     <div class="col-sm-10">
       <input
-          type="date" value="2020-05-04"
+          id="date"
+          class="form-control wbdv-field wbdv-dob"
+          type="text"
+          value="mm/dd/yyyy"
       />
     </div>
 
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   <div class="form-group row">
@@ -102,7 +121,7 @@
 
     <div class="col-sm-10">
       <a href="../profile/profile.template.client.html"
-         class="btn btn-success btn-block">
+         class="btn btn-success btn-block wbdv-button wbdv-update">
         Update
       </a>
     </div>
@@ -115,7 +134,7 @@
 
     <div class="col-sm-10">
       <a href="../index.html"
-         class="btn btn-danger btn-block">
+         class="btn btn-danger btn-block wbdv-button wbdv-logout">
         Logout
       </a>
     </div>
@@ -123,45 +142,9 @@
   </div>
 
 
-
-
-
-
   <br/>
 
 
-  <!--Marital Status
-  <label>
-  <input type="radio" name="Mstatus"/>Married</label>
-  <label>
-  <input type="radio" name="Mstatus"/>Single</label>
-  <label>
-  <input type="radio" name="Mstatus"/>Divorced
-    </label>
-
-  <br/>
-
-  Favorite Color
-  <label>
-    <input type="radio" name="FCOLOR"/>Red</label>
-  <label>
-    <input type="radio" name="FCOLOR"/>Pink</label>
-  <label>
-    <input type="radio" name="FCOLOR"/>Purple
-  </label>
-
-  <br/>
-
-  Favorite Movie Genres
-  <label>
-    <input type="checkbox" name="MGENRE"/>Horror</label>
-  <label>
-    <input type="checkbox" name="MGENRE"/>Comedy</label>
-  <label>
-    <input type="checkbox" name="MGENRE"/>Romance
-  </label>
-
--->
 
 
   </div>
