@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Course Editor</title>
 
+
+
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         rel="stylesheet"/>
 
@@ -24,12 +26,12 @@
 
 
 
-<div class="course-header wbdv-course-title" >
+<div class="course-header" >
 
 
 
   <div>
-    <a class="navbar-brand" href="#"> <h3>Course Editor: CS5610 - Web Development</h3>
+    <a class="navbar-brand wbdv-course-title" href="#"> <h3>Course Editor: CS5610 - Web Development</h3>
     </a>
 
     <ul class="nav nav-tabs float-right">
@@ -64,46 +66,58 @@
 <div class="row" >
   <div class="col-4" style="background-color: rgb(80,80,80)">
     <div>
-      <h3 style="color: white">
-        Module List
-      </h3>
+      <h4 style="color: white">
+          Module List
+      </h4>
 
 
      <ul class="list-group wbdv-module-list">
-        <li class="list-group-item active module-x wbdv-module-item">Module 1 -React>
-          <button
-              class="btn btn-white float-right"
-              type="submit"
-              style="color:white">
-            X </button></li>
-
-        <li class="list-group-item">Module 2 -JQuery
+        <li class="list-group-item active module-x wbdv-module-item ">Module 1 -React>
           <button
               class="btn btn-white float-right wbdv-module-item-delete-btn"
               type="submit"
               style="color:white">
             X </button></li>
-        <li class="list-group-item">Module 3 -Redux
+
+        <li class="list-group-item wbdv-module-item">Module 2 -JQuery
           <button
-              class="btn btn-white float-right"
+              class="btn btn-white float-right wbdv-module-item-delete-btn"
               type="submit"
               style="color:white">
             X </button></li>
-        <li class="list-group-item">Module 4 -Angular
+        <li class="list-group-item wbdv-module-item">Module 3 -Redux
           <button
-              class="btn btn-white float-right"
+              class="btn btn-white float-right wbdv-module-item-delete-btn"
               type="submit"
               style="color:white">
             X </button></li>
-        <li class="list-group-item">Module 5 -Node
+        <li class="list-group-item wbdv-module-item">Module 4 -Angular
           <button
-              class="btn btn-white float-right"
+              class="btn btn-white float-right wbdv-module-item-delete-btn"
               type="submit"
               style="color:white">
             X </button></li>
-       <li class="list-group-item">Module 6 -Mongo
+        <li class="list-group-item wbdv-module-item">Module 5 -Node
+          <button
+              class="btn btn-white float-right wbdv-module-item-delete-btn"
+              type="submit"
+              style="color:white">
+            X </button></li>
+       <li class="list-group-item wbdv-module-item">Module 6 -Mongo
          <button
-             class="btn btn-white float-right"
+             class="btn btn-white float-right wbdv-module-item-delete-btn"
+             type="submit"
+             style="color:white">
+           X </button></li>
+       <li class="list-group-item wbdv-module-item">Module 7
+         <button
+             class="btn btn-white float-right wbdv-module-item-delete-btn"
+             type="submit"
+             style="color:white">
+           X </button></li>
+       <li class="list-group-item wbdv-module-item">Module 8
+         <button
+             class="btn btn-white float-right wbdv-module-item-delete-btn"
              type="submit"
              style="color:white">
            X </button></li>
@@ -114,7 +128,7 @@
           class="btn btn-white float-right wbdv-module-item-add-btn"
           type="submit"
           style="color:white">
-        Add </button>
+        Add Module </button>
     </div>
   </div>
 
@@ -126,20 +140,23 @@
       <h3 id="lessons">
         Lessons
       </h3>
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs wbdv-lesson-tabs">
       <li class="nav-item">
-        <a class="nav-link lessons" href="#">Lesson 1</a>
+        <a class="nav-link lessons wbdv-lesson-tabs" href="#">Lesson 1</a>
       </li>
       <li class="nav-item wbdv-page-tab">
-        <a class="nav-link active" href="#">Lesson 2</a></li>
+        <a class="nav-link active wbdv-lesson-tabs" href="#">Lesson 2</a></li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Lesson 3</a></li>
+        <a class="nav-link wbdv-lesson-tabs" href="#">Lesson 3</a></li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Lesson 4</a></li>
+        <a class="nav-link wbdv-lesson-tabs" href="#">Lesson 4</a></li>
+      <li class="nav-item wbdv-lesson-tabs">
+        <a class="nav-link wbdv-lesson-tabs" href="#">Lesson 5</a></li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Lesson 5</a></li>
+        <a class="nav-link wbdv-lesson-tabs" href="#">Lesson 6</a>
+      </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Lesson 6</a>
+        <a class="nav-link wbdv-lesson-add-btn" href="#">+</a>
       </li>
     </ul>
 
@@ -157,16 +174,16 @@
         <li class="nav-item wbdv-topic-pill">
           <a class="nav-link " href="#">
           Topic 1</a></li>
-        <li class="nav-item">
+        <li class="nav-item wbdv-topic-pill">
           <a class="nav-link active" href="#">
           Topic 2</a></li>
-        <li class="nav-item">
+        <li class="nav-item wbdv-topic-pill">
           <a class="nav-link" href="#">
           Topic 3</a></li>
-        <li class="nav-item">
+        <li class="nav-item wbdv-topic-pill">
           <a class="nav-link" href="#">
           Topic 4</a></li>
-        <li class="nav-item">
+        <li class="nav-item wbdv-topic-pill">
           <a class="nav-link" href="#">
         Topic 5</a></li>
         <li class="nav-item wbdv-topic-add-btn">
@@ -195,33 +212,23 @@
         <li>Widget 5</li>
       </ol>
 
-      <a href="../course-list/course-list.template.client.html"
-         class="btn btn-white float-right wbdv-course-editor wbdv-close"
-         style= "color: white" >
-        Exit
-      </a>
+
     </div>
+
+    <a href="../course-list/course-list.template.client.html"
+       class="btn btn-white float-right wbdv-course-editor wbdv-close"
+       style= "color: white" >
+      Exit
+    </a>
 
   </div>
 
 
-
-
-
-
-
-
-
     </div>
-
-
-
-
-
 
 
 
 </body>
 
-</div>
+
 </html>
