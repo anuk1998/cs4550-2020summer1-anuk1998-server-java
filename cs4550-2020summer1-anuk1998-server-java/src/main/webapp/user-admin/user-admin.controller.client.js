@@ -29,9 +29,20 @@ let users =[
       copy.find('.wbdv-first-name').html(user.first)
       copy.find('.wbdv-last-name').html(user.last)
       copy.find('.wbdv-role').html(user.role)
+      copy.find('.wbdv-delete').attr('id', user._id)
+          .click(deleteUser)
+
       $tbody.append(copy)
     }
 
+  }
+
+  function deleteUser(event) {
+  console.log(event)
+  const target = event.currentTarget
+    const $button = $(target)
+    const userId = $button.attr('id')
+    alert('delete user ' + userId)
   }
 
 function createUser() {
@@ -51,7 +62,7 @@ function createUser() {
         users.push(actualUser)
         renderAllUsers()
       })
-  
+
 }
 
 function findAllUsers(){
@@ -101,7 +112,7 @@ tr.css('backgroundColor', 'blue')
     $tbody.append(newUserRow)
   }
 
-  // renderAllUsers()
+   renderAllUsers()
 }
 
 
