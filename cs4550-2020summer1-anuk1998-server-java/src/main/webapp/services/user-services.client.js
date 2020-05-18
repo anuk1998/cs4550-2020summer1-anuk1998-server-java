@@ -1,69 +1,61 @@
-function AdminuserServiceClient() {
+function AdminUserServiceClient() {
     this.createUser = createUser;
     this.findAllUsers = findAllUsers;
     this.findUserById = findUserById;
     this.deleteUser = deleteUser;
     this.updateUser = updateUser;
-    this.url = 'https://wbdv-generic-server.herokuapp.com/api/anuk1998/users'
+    // replace jannunzi with your own unique identifier ... do not use jannunzi
+    this.url = 'https://wbdv-generic-server.herokuapp.com/api/anuk1998/users';
     var self = this;
-
     function createUser(user) {
         console.log('creating user')
         console.log(user)
         const userString = JSON.stringify(user)
         console.log(userString)
 
-        //sending request out to server
-        return fetch(self.url, {method: 'POST',
-        body: userString,
-         headers: {
-            'content-type': 'application/json'
-         }
+        return fetch(self.url, {
+            method: 'POST',
+            body: userString,
+            headers: {
+                'content-type': 'application/json'
+            }
         })
             .then(function(response) {
                 return response.json()
             })
+
+
     }
-
-
-
     function findAllUsers() {
-        /*console.log('find all users')
-        return ['some user']*/
         return fetch(self.url)
-        .then(function(response){
-            return response.json()
-        })
-
-    }
-
-    function findUserById(userId) {
-        return fetch(self.url + '/' + userId)
-            .then(function(response){
+            .then(function(response) {
                 return response.json()
             })
     }
-
+    function findUserById(userId) {
+        return fetch(self.url + '/' + userId)
+            .then(function(response) {
+                return response.json()
+            })
+    }
     function updateUser(userId, user) {
         return fetch(self.url + '/' + userId, {
             method: 'PUT',
             body: JSON.stringify(user),
             headers: {
-                'content-type' : 'application/json'
+                'content-type': 'application/json'
             }
         })
             .then(function(response) {
                 return response.json()
-                }
-            )
-
+            })
     }
-
     function deleteUser(userId) {
-        console.log('removing user:' + userId)
+        console.log('removing user: ' + userId)
         return fetch(self.url + '/' + userId, {
-            method: 'DELETE'})
-            .then(function(response){
+            method: 'DELETE'
+        })
+            .then(function(response) {
                 return response.json()
             })
     }
