@@ -102,11 +102,13 @@ function createUser() {
   const username = $usernameFld.val()
   const first = $firstFld.val()
   const last = $lastFld.val()
+    const role = $roleFld.val()
 
   const newUser = {
     username: username,
     first: first,
-    last: last
+    last: last,
+      role: role
   }
   service.createUser(newUser)
       .then(function(actualUser){
@@ -127,7 +129,6 @@ function main() {
   $tbody = $('tbody')
   $addBtn = $('.wbdv-add-btn')
   $updateBtn = $('.wbdv-update')
-  $addBtn.css('backgroundColor', 'yellow')
 
   $addBtn.click(createUser)
   $updateBtn.click(updateUser)
@@ -142,12 +143,12 @@ function main() {
 
 
   //fetch all h1 elements from html document
-  const h1 = jQuery('h1')
-  h1.css('color', 'red')
+ /* const h1 = jQuery('h1')
+  h1.css('color', 'red')*/
 
-  const tr = jQuery('tr')
+ /* const tr = jQuery('tr')
   tr.css('backgroundColor', 'blue')
-      .css('color', 'white')
+      .css('color', 'white')*/
 
  /* //adding element dynamically
   const h2 = jQuery('<h2>Hello from jQuery</h2>')
