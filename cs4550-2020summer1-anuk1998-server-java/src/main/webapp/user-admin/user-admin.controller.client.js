@@ -61,7 +61,7 @@ function selectUser(event) {
 
 
 
-    function updateUser(event) {
+    function updateUser() {
       const updatedUser = {
         _id: selectedUser._id,
         username: $usernameFld.val(),
@@ -81,7 +81,7 @@ function selectUser(event) {
             renderAllUsers()
           })
     }
-    
+
 //deletes user
 function deleteUser(event) {
   console.log(event)
