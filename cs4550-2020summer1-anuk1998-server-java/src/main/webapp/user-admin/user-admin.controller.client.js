@@ -39,14 +39,6 @@ function renderAllUsers() {
   }
 }
 
-function updateUser() {
-  const updatedUser = {
-    username: $usernameFld.val(),
-    first: $firstFld.val(),
-    last: $lastFld.val()
-  }
-
-}
 
 
 function renderUser(user) {
@@ -66,6 +58,47 @@ function selectUser(event) {
         renderUser(user)
       })
 }
+
+  function updateUser(event) {
+  const userId = $updateBtn.attr('id')
+    const updatedUser = {
+      _id: selectedUser._id,
+      username: $usernameFld.val(),
+      first: $firstFld.val(),
+      last: $lastFld.val(),
+      role: $roleFld.val()
+    }
+    service.updateUser(selectedUser._id, updatedUser)
+        .then(function(status) {
+          users = users.map(function(user) {
+            if(user._id === selectedUser._id) {
+              return updatedUser
+            } else {
+              return user
+            }
+          })
+        })
+
+
+    /*const updatedUser = {
+      _id: selectedUser._id,
+      username: $usernameFld.val(),
+      first: $firstFld.val(),
+      last: $lastFld.val()
+    }
+    service.updateUser(selectedUser._id, updatedUser)
+        .then(function(status) {
+          users = users.map(function(user) {
+            if(user._id === selectedUser.id) {
+              return updatedUser
+            }
+            else {
+              return user
+            }
+          })
+        })*/
+  }
+
 
 //deletes user
 function deleteUser(event) {
