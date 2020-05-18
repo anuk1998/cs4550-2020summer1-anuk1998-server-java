@@ -59,29 +59,29 @@ function selectUser(event) {
       })
 }
 
-  function updateUser() {
 
-    const updatedUser = {
-      _id: selectedUser._id,
-      username: $usernameFld.val(),
-      first: $firstFld.val(),
-      last: $lastFld.val()
-    }
-    service.updateUser(selectedUser._id, updatedUser)
-        .then(function(status) {
-          users = users.map(function(user) {
-            if(user._id === selectedUser.id) {
-              return updatedUser
-            }
-            else {
-              return user
-            }
+
+    function updateUser(event) {
+      const updatedUser = {
+        _id: selectedUser._id,
+        username: $usernameFld.val(),
+        first: $firstFld.val(),
+        last: $lastFld.val(),
+        role: $roleFld.val()
+      }
+      service.updateUser(selectedUser._id, updatedUser)
+          .then(function(status) {
+            users = users.map(function(user) {
+              if(user._id === selectedUser._id) {
+                return updatedUser
+              } else {
+                return user
+              }
+            })
+            renderAllUsers()
           })
-        })
-    renderAllUsers()
-  }
-
-
+    }
+    
 //deletes user
 function deleteUser(event) {
   console.log(event)
@@ -89,10 +89,11 @@ function deleteUser(event) {
   const $button = $(target)
   const userId = $button.attr('id')
   service.deleteUser(userId)
-      .then(function(){
-        users = users.filter(function(user){
+      .then(function() {
+        users = users.filter(function (user) {
           return user._id !== userId
         })
+        renderAllUsers()
       })
 }
 
@@ -148,23 +149,23 @@ function main() {
   tr.css('backgroundColor', 'blue')
       .css('color', 'white')
 
-  //adding element dynamically
+ /* //adding element dynamically
   const h2 = jQuery('<h2>Hello from jQuery</h2>')
   const body = jQuery('body')
-  body.append(h2)
+  body.append(h2)*/
 
-  //$ is alias to jQuery function
+  /*//$ is alias to jQuery function
   //creating new tr Dan
   const newTr = $('<tr><td>Dan</td></tr>')
   const tBody = $('tbody')
-  $tbody.append(newTr)
+  $tbody.append(newTr)*/
 
-  //adding users from array dynamically at the end of table
+  /*//adding users from array dynamically at the end of table
   for(let i = 0; i<users.length; i++) {
     const username = users[i].username
     const newUserRow = $('<tr><td>'+username+'</td></tr>')
     $tbody.append(newUserRow)
-  }
+  }*/
 
   //renderAllUsers()
 }
