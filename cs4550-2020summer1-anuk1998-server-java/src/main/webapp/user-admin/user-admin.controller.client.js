@@ -46,7 +46,6 @@ function renderUser(user) {
   $usernameFld.val(user.username)
   $firstFld.val(user.first)
   $lastFld.val(user.last)
-
 }
 
 function selectUser(event) {
