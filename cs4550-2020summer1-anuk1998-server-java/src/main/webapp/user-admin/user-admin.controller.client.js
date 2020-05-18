@@ -60,27 +60,8 @@ function selectUser(event) {
 }
 
   function updateUser(event) {
-  const userId = $updateBtn.attr('id')
+
     const updatedUser = {
-      _id: selectedUser._id,
-      username: $usernameFld.val(),
-      first: $firstFld.val(),
-      last: $lastFld.val(),
-      role: $roleFld.val()
-    }
-    service.updateUser(selectedUser._id, updatedUser)
-        .then(function(status) {
-          users = users.map(function(user) {
-            if(user._id === selectedUser._id) {
-              return updatedUser
-            } else {
-              return user
-            }
-          })
-        })
-
-
-    /*const updatedUser = {
       _id: selectedUser._id,
       username: $usernameFld.val(),
       first: $firstFld.val(),
@@ -96,7 +77,7 @@ function selectUser(event) {
               return user
             }
           })
-        })*/
+        })
   }
 
 
