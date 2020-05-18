@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>User Admin</title>
+
   <link rel="stylesheet" href=
           "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
   <link rel="stylesheet" href=
@@ -20,10 +21,12 @@
 
 
 </head>
-<body>
+<body style = "margin-left: 20px">
 <h1>User Admin</h1>
-<table class = "table-striped">
-  <thead>
+
+
+<table class = "table">
+  <thead style="border-spacing: 0">
   <tr>
     <th>Username</th>
     <th>Password</th>
@@ -34,16 +37,22 @@
   </tr>
 
   <tr>
-    <td><input class="wbdv-username-fld form-control"
+    <td><input
+            id="usernameFld" class="wbdv-username-fld form-control"
     placeholder = "Username"/></td>
-    <td><input class="wbdv-password-fld form-control"
+    <td><input
+            id="passwordFld" class="wbdv-password-fld form-control"
                placeholder = "Password"/></td>
-    <td><input class="wbdv-first-fld form-control"
+    <td><input
+            id="firstNameFld"class="wbdv-first-fld form-control"
                placeholder = "First Name"/></td>
-    <td><input class="wbdv-last-fld form-control"
+    <td><input
+            id="lastNameFld"class="wbdv-last-fld form-control"
                placeholder = "Last Name"/></td>
     <td>
-      <select class="wbdv-role-fld form-control">
+      <select
+              id="roleFld"
+              class="wbdv-role-fld form-control">
         <option>FACULTY</option>
         <option>STUDENT</option>
         <option>ADMIN</option>
@@ -53,29 +62,31 @@
 
     <td>
       <i class="fa-2x fa fa-search wbdv-search"></i>
-      <button class="wbdv-add-btn"><i
+      <button class="wbdv-add-btn btn btn-light"><i
               class="fa-2x fa fa-plus wbdv-create"></i></button>
-      <button class = "wbdv-update"><i class="fa-2x fa fa-check wbdv-update"></i>
+      <button class = "wbdv-update btn btn-light"><i class="fa-2x fa fa-check wbdv-update"></i>
         </button>
     </td>
   </tr>
   </thead>
 
-  <tbody>
-  <tr class="wbdv-user-row-template">
-    <td class="wbdv-username">alice</td>
-    <td class="wbdv-password">****</td>
-    <td class="wbdv-first-name">Alice</td>
-    <td class="wbdv-last-name">Wonderland</td>
-    <td class="wbdv-role">Faculty</td>
-    <td class="wbdv-controls">
-      <button class="wbdv-delete"><i id="wbdv-remove" class="fa-2x fa fa-times wbdv-remove"></i>
+  <tbody >
+  <tr class="wbdv-user-row-template wbdv-tbody
+wbdv-template wbdv-user wbdv-hidden">
+    <td class="wbdv-username"></td>
+    <td class="wbdv-password">*******</td>
+    <td class="wbdv-first-name"></td>
+    <td class="wbdv-last-name"></td>
+    <td class="wbdv-role"></td>
+    <td class="wbdv-controls wbdv-actions">
+      <button class="wbdv-delete btn btn-light"><i id="wbdv-remove" class="fa-2x fa fa-times wbdv-remove"></i>
       </button>
-      <button class="wbdv-edit"><i id="wbdv-edit" class="fa-2x fa fa-pencil wbdv-edit"></i>
+      <button class="wbdv-edit btn btn-light"><i id="wbdv-edit" class="fa-2x fa fa-pencil wbdv-edit"></i>
       </button>
     </td>
   </tr>
   </tbody>
 </table>
+
 </body>
 </html>

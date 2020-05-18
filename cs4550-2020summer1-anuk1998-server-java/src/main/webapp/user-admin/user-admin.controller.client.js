@@ -59,6 +59,13 @@ function selectUser(event) {
       })
 }
 
+    function clearInputFields() {
+        $usernameFld.val().set("")
+        $passwordFld.val().set("")
+        $firstFld.val().set("")
+        $lastFld.val().set("")
+        $roleFld.val().set("")
+    }
 
 
     function updateUser() {
@@ -79,8 +86,11 @@ function selectUser(event) {
               }
             })
             renderAllUsers()
+              clearInputFields()
           })
     }
+
+
 
 //deletes user
 function deleteUser(event) {
