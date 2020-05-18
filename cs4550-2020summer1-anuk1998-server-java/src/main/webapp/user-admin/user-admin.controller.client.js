@@ -59,7 +59,7 @@ function selectUser(event) {
       })
 }
 
-  function updateUser(event) {
+  function updateUser() {
 
     const updatedUser = {
       _id: selectedUser._id,
@@ -78,6 +78,7 @@ function selectUser(event) {
             }
           })
         })
+    renderAllUsers()
   }
 
 
@@ -124,6 +125,7 @@ function findAllUsers(){
 function main() {
   $tbody = $('tbody')
   $addBtn = $('.wbdv-add-btn')
+  $updateBtn = $('.wbdv-update')
   $addBtn.css('backgroundColor', 'yellow')
 
   $addBtn.click(createUser)
