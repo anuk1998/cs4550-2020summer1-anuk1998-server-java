@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloWorldController {
+public class HelloWorldController {  
     @GetMapping("/api/hello/{message}")
     public HelloModel sayHello(
             @PathVariable("message") String msg) {
